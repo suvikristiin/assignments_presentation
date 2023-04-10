@@ -11,7 +11,7 @@ I chose this task because it is simple, yet it effectively tests and teaches var
 Create a function getCountOfLetters that counts the number of each letter in a string and returns the data in an object.
 
 For example:
-```
+```js
 const result = getCountOfLetters("a black cat");
 console.log(result);
 /* prints 
@@ -28,10 +28,10 @@ console.log(result);
 ### Solution and thoughts during the assignment
 First, I decide to use a for loop to iterate through each character of the input string. I also decide to initialize an empty object at the beginning. If the iterated character is not already in the object, I would add it to the object with a value of 1. Otherwise, I would simply increase its value by one. I should also skip spaces in the for loop using a conditional statement. 
 
-At the end of the assignment, I realized that I should sort the object in alphabetical order based on the keys. Initially, this was a bit challenging because I wanted to sort the object keys using the "Object.keys(object).sort()" command. This sorts the object keys but returns them as an array. However, I need to return a sorted object that displays the count of each letter in the input string. 
+At the end of the assignment, I realized that I should sort the object in alphabetical order based on the keys. Initially, this was a bit challenging because I wanted to sort the object keys using the ```Object.keys(obj).sort()``` command. This sorts the object keys but returns them as an array. However, I need to return a sorted object that displays the count of each letter in the input string. 
 
 After many attempts, I realized that I could initialize an empty return object and use the forEach method to iterate through the sorted object keys. At the same time, I could add each key-value pair to the return object.
-````
+```js
 function getCountOfLetters(str) {
     const count = {};
 
@@ -56,4 +56,4 @@ function getCountOfLetters(str) {
     
     return returnObject;
 }
-````
+```
